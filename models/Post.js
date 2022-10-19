@@ -40,6 +40,5 @@ post.init(
         modelName: 'post',
     }
 );
-
 // exports file
 module.exports = post;
