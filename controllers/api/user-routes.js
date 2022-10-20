@@ -30,21 +30,7 @@ router.get('/:id', (req, res) => {
             exclude: ['password']
         },
         // get the id parameter
-        where: { id: req.params.id },
-        include: [
-            {
-                model: Post,
-                attributes: ['id', 'title', 'copy', 'created_at']
-            },
-            {
-                model: Comment,
-                attributes: ['id', 'comment_text', 'created_at'],
-                include: {
-                    model: Post,
-                    attributes: ['title']
-                }
-            }
-        ]
+        where: { id: req.params.id }
     })
 
         .then(singleUserData => {
