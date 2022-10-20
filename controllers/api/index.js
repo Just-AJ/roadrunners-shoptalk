@@ -3,7 +3,7 @@ const router = require('express').Router();
 
 // import api routes and prefix
 const userRoutes = require('./user-routes.js');
-const postRoutes = require('./post-routes');
+const postRoutes = require('./post_routes');
 const commentRoutes = require('./comment_routes');
 
 // use api routes 

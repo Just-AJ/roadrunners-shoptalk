@@ -42,6 +42,32 @@ router.delete('/:id', (req,res)=> {
         res.json(dbCommentData);
     });
 });
-
+// edit comment
+router.put('/:id', (req, res) =>{
+    Comment.update(
+        {
+            comment_text: req.body.comment_text,
+            user_id: req.body.user_id,
+            post_id: req.body.post_id
+        },
+        
+        {
+            where: {
+            id: req.params.id
+        }
+    }
+    )
+    .then((dbCommentData) => {
+            if (!dbCommentData) {
+                res.status(404).json({ message: "No dbComment found with this id" });
+                return;
+            }
+            res.json(dbCommentData);
+        })
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+})
 // export routes
 module.exports = router;
