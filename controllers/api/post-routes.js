@@ -30,7 +30,7 @@ router.post("/", (req, res) => {
         });
 });
 
-router.put("/:id", withAuth, (req, res) => {
+router.put("/:id",(req, res) => {
     console.log(req.body.copy)
     post.update(
         {
@@ -58,7 +58,7 @@ router.put("/:id", withAuth, (req, res) => {
 });
 
 
-router.delete("/:id", withAuth, (req, res) => {
+router.delete("/:id", (req, res) => {
     console.log("id", req.params.id);
     post.destroy({
         where: {
