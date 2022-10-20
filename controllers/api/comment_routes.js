@@ -1,7 +1,47 @@
-// import all models
-const Post = require('../../models/Post');
-const User = require('../../models/User');
-const Comment = require('../../models/Comment');
+const router = require('express').Router();
+const {Comment} = require('../../models')
+const withAuth = require('../../utils/auth');
 
-// comment associations
-Comment
+// find all comments
+router.get('/', (req, res)=> {
+    Comment.findAll()
+    .then(dbCommentData => res.json(dbCommentData))
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+// post a comment route
+router.post('/', (req,res)=> {
+    Comment.create(
+        {
+            comment_text: req.body.comment_text,
+            user_id: req.body.user_id,
+            post_id: req.body.post_id
+        }
+    ).then(dbCommentData => res.json(dbCommentData))
+    .catch(err => {
+        console.log(err);
+        res.status(400).json(err);
+    });
+});
+// delete a comment route
+router.delete('/:id', (req,res)=> {
+    Comment.destroy(
+        {
+            where: {
+                id: req.params.id
+            }
+        }
+    )
+    .then(dbCommentData => {
+        if(!dbCommentData){
+            res.status(404).json({message: 'no comment found with this id'});
+            return;
+        }
+        res.json(dbCommentData);
+    });
+});
+
+// export routes
+module.exports = router;

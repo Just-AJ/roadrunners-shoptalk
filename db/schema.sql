@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS around _the_world_db;
+DROP DATABASE IF EXISTS around_the_world_db;
 
-CREATE DATABASE around _the_world_db;
+CREATE DATABASE around_the_world_db;

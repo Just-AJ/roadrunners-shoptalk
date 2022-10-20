@@ -17,4 +17,6 @@ User.hasMany(Comment, {
     onDelete: 'SET NULL'
 });
 
+module.exports = { User, Post, Comment };
+
 
