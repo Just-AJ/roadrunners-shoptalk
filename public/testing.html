@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html id="page">
+<html lang="en" id="page">
    <head>
-      <title>Getting Started with Cirrus</title>
+      <title>Around the world</title>
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
       <meta charset="UTF-8"/>
       <meta http-equiv="X-UA-Compatible" content="IE=edge;"/>
@@ -21,7 +21,7 @@
          </div>
          <div class="header-nav" id="header-menu">
             <div class="nav-left">
-               <div class="nav-item text-center"> <a href="#"> <span class="icon"> <i class="none" aria-hidden="true"> <img src="./stylesheets/globe.png"> </i> </span> </a> </div>
+               <div class="nav-item text-center"> <a href="#"> <span class="icon"> <i class="none" aria-hidden="true"> <img src="./img/globe.png"> </i> </span> </a> </div>
             </div>
             <div class="nav-right">
                <div class="nav-item has-sub toggle-hover" id="dropdown">
@@ -37,48 +37,58 @@
          </div>
       </div>
  <!-- Hero -->
-</div>
-    </div>
-      <section class="section">
-         <div class="hero fullscreen">
-            <div class="hero-body">
-               <div class="content">
-                  <div class="text-center">
-                     <h1>👋 Hello world!</h1>
-                     <img src="./stylesheets/duy-pham-Cecb0_8Hx-o-unsplash.jpg">
-                  </div>
-               </div>
-            </div>
+         <div class="hero fullscreen hero-img parallax-img">
+            <img src="./img/duy-pham-Cecb0_8Hx-o-unsplash.jpg" style="height: 100%; width: 100%;">
          </div>
-      </section>
-
-      <div class="row no-space">
-        <div class="col-6">
-            <div class="uppercase">Forum</div>
-        </div>
-        <div class="col-6">
-            <div class="uppercase">Find a Friend</div>
-        </div>
-    </div>
-   
-    <div class="frame__body" style="background: #eee; padding: 1rem; margin: 1rem">
-        <div class="frame__title u-text-center">Frame Body</div>
-        <div class="frame__subtitle u-text-center">
-            Welcome to around the world! with this site we 
+<!-- Description and translate button showcase -->
+    <div class="frame__body u-round-md" style="background: rgba(0, 153, 255, 0.575); padding: 1rem; margin: 1rem">
+        <div class="frame__title u-text-center"><h4>Welcome to Around the world!</h4></div>
+        <div class="frame__subtitle u-text-center u-round-xl">
+            <p>With this site we are working to connect many from around the world and let them into your world.</p>
         </div>
         <blockquote class="u-text-center">
-            The text-white margins between the gray boxes is to demonstrate how the frame sub sections are separated.
+            <p> Through out your visit, you will find many forums or posts with different languages. We want everyone to be included, so if 
+                you find a post that you cannot read. Just click on the translate button and you will be able to interact within any forum whenever 
+                and wherever you are!
+            </p> 
         </blockquote>
     </div>
-    <form action="/action_page.php">
-        <label for="translate">Write below</label><br>
-        <input type="text" id="translator" name="translateBox"><br>
-        <input type="submit" value="Submit">
-      </form>
-      <script src="./translate.js"></script>
-</body>
 
+    <div class="u-flex u-justify-center u-justify-space-around">
+        <div class="card u-shadow-xl" style="max-width: 350px;">
+            <div class="card__container">
+                <div class="card__image"><img src="./img/valiant-made-UrzN-8K1PCE-unsplash.jpg" style="height: 100%;"></div>
 
+                <div class="card__title-container">
+                    <p class="title">Forum</p><span class="subtitle">Main forum</span></div>
+            </div>
+            <div class="content">
+                <p class="u-text-center"> Here you are able to connect with others and begin a dialogue with fellow friends like you. Be yourself and learn to connect. </p>
+            </div>
+            <div class="card__action-bar u-center">
+                <button class="btn-link outline"><a href=forum.html>Go Here</a></button>
+            </div>
+            <div class="card__footer">
+                <div class="u-text-center"><span>Make sure to link your language under settings!</span></div>
+            </div>
+        </div>
+        <div class="card u-shadow-xl" style="max-width: 350px;">
+            <div class="card__container">
+                <div class="card__image"><img src="./img/noah-buscher-8A7fD6Y5VF8-unsplash.jpg" style="height: 100%; width: 100%;"></div>
+                <div class="card__title-container">
+                    <p class="title">Fun Random</p><span class="subtitle">GIF/VIDEOS/PICTURES</span></div>
+            </div>
+            <div class="content">
+                <p class="u-text-center"> This is your space, upload any type of media and share with others. Anything that will make someone smile 🙂</p>
+            </div>
+            <div class="card__action-bar u-center">
+                <button class="btn-link outline">Go here</button>
+            </div>
+            <div class="card__footer">
+                <div class="u-text-center"><span>Make sure to link your language under settings!</span></div>
+            </div>
+        </div>
+    </div>
 
 <footer class="footer">
     <h6 class="footer__title text-white uppercase"> Around The World </h6> 
@@ -109,4 +119,7 @@
         </div>
     </div>
     <p> Made with ❤️ by <br> Michael Z, Brayden M, Ajani W, Quincy C, and Paul L. </p>
+
+
+    <script src="./translate.js"></script>
 </html>
