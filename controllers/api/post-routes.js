@@ -71,11 +71,7 @@ router.post("/", (req, res) => {
         });
 });
 
-<<<<<<< HEAD:controllers/api/post_routes.js
-router.put("/:id",  (req, res) => {
-=======
 router.put("/:id",(req, res) => {
->>>>>>> 4eb75e6d9d34836805cdb51ffb0566442b09bc74:controllers/api/post-routes.js
     console.log(req.body.copy)
     Post.update(
         {
@@ -103,11 +99,7 @@ router.put("/:id",(req, res) => {
 });
 
 
-<<<<<<< HEAD:controllers/api/post_routes.js
-router.delete("/:id",  (req, res) => {
-=======
 router.delete("/:id", (req, res) => {
->>>>>>> 4eb75e6d9d34836805cdb51ffb0566442b09bc74:controllers/api/post-routes.js
     console.log("id", req.params.id);
     Post.destroy({
         where: {
