@@ -42,7 +42,7 @@ router.get('/', (req,res) => {
         console.log(err);
         res.status(500).json(err)
     });
-}
+});
 
 
 // GET , create a single-post 
@@ -95,6 +95,28 @@ router.get('/post/:id', (req, res) => {
         });
 
 });
+
+
+// GET , get and render login handlebars page 
+router.get('/login', (req,res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    
+    res.render('login');
+});
+
+
+// GET , get and render signup handlebars page 
+router.get('/signup', (req,res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    
+    res.render('signup');
+})
 
 //exports router
 module.exports = router;
