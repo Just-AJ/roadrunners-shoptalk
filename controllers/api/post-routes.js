@@ -1,24 +1,65 @@
 const router = require("express").Router();
-const { User, post } = require("../../models");
+const { User, Post, Comment } = require("../../models");
 const withAuth = require("../../utils/auth")
 
 
 router.get("/", (req, res) => {
-    post.findAll({
-        include: [{
+    Post.findAll({
+        attributes: ['id', 'title', 'copy', 'created_at'],
+         // JOIN tables
+         include: [
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            },
+        {
             model: User,
             attributes: ["username"],
-        }]
+        }
+    ]
 
     }).then((postData) => res.json(postData))
         .catch((err) => {
             console.log(err);
             res.status(500).json(err);
         })
-})
+});
 
+router.get('/:id', (req, res)=> {
+    Post.findOne({
+        where: {
+            id: req.params.id
+        },
+        attributes: ['id', 'title', 'copy', 'created_at'],
+         // JOIN tables
+         include: [
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            },
+        {
+            model: User,
+            attributes: ["username"],
+        }
+    ]
+
+    }).then((postData) => res.json(postData))
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        })
+    });
+    
 router.post("/", (req, res) => {
-    post.create({
+    Post.create({
         title: req.body.title,
         copy: req.body.copy,
         user_id: req.session.user_id,
@@ -30,9 +71,13 @@ router.post("/", (req, res) => {
         });
 });
 
-router.put("/:id", withAuth, (req, res) => {
+<<<<<<< HEAD:controllers/api/post_routes.js
+router.put("/:id",  (req, res) => {
+=======
+router.put("/:id",(req, res) => {
+>>>>>>> 4eb75e6d9d34836805cdb51ffb0566442b09bc74:controllers/api/post-routes.js
     console.log(req.body.copy)
-    post.update(
+    Post.update(
         {
             title: req.body.title,
             copy: req.body.copy,
@@ -58,9 +103,13 @@ router.put("/:id", withAuth, (req, res) => {
 });
 
 
-router.delete("/:id", withAuth, (req, res) => {
+<<<<<<< HEAD:controllers/api/post_routes.js
+router.delete("/:id",  (req, res) => {
+=======
+router.delete("/:id", (req, res) => {
+>>>>>>> 4eb75e6d9d34836805cdb51ffb0566442b09bc74:controllers/api/post-routes.js
     console.log("id", req.params.id);
-    post.destroy({
+    Post.destroy({
         where: {
             id: req.params.id,
         },
