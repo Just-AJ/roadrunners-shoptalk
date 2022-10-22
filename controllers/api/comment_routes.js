@@ -12,7 +12,7 @@ router.get('/', (req, res)=> {
     });
 });
 // post a comment route
-router.post('/', (req,res)=> {
+router.post('/', withAuth, (req,res)=> {
     Comment.create(
         {
             comment_text: req.body.comment_text,
@@ -26,7 +26,7 @@ router.post('/', (req,res)=> {
     });
 });
 // delete a comment route
-router.delete('/:id', (req,res)=> {
+router.delete('/:id', withAuth, (req,res)=> {
     Comment.destroy(
         {
             where: {
@@ -43,7 +43,7 @@ router.delete('/:id', (req,res)=> {
     });
 });
 // edit comment
-router.put('/:id', (req, res) =>{
+router.put('/:id', withAuth, (req, res) =>{
     Comment.update(
         {
             comment_text: req.body.comment_text,
