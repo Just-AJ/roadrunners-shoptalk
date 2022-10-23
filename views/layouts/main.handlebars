@@ -9,13 +9,14 @@
       <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet"/>
       <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"/>
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
-      <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous" ></script> 
    </head>
+   
    <body>
+    <!-- Nav Bar -->
       <div class="header header-fixed unselectable header-animated">
          <div class="header-brand">
             <div class="nav-item no-hover">
-               <h5 class="title">Around The World</h5>
+               <h5 class="title"><a href="/"> {{ translator }}Around The World</a></h5>
             </div>
             <div class="nav-item nav-btn" id="header-btn"> <span></span> <span></span> <span></span> </div>
          </div>
@@ -40,7 +41,11 @@
          </div>
       </div>
  
+ <!-- Hero and Body -->
  {{{ body }}}
+ </body>
+
+ <!-- footer -->
 <footer class="footer">
     <h6 class="footer__title text-white uppercase"> Around The World </h6> 
     <div class="content">
@@ -72,8 +77,6 @@
             </div>
         </div>
     </div>
+    
     <p> Made with ❤️ by <br> Michael Z, Brayden M, Ajani W, Quincy C, and Paul L. </p>
-
-
-    <script src="./translate.js"></script>
 </html>
