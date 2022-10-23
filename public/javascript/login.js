@@ -4,8 +4,10 @@ async function loginFormHandler(event) {
     // retrieving values from user sign-up
     const username = document.querySelector('#user-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
+    const language = document.querySelector('#languageSelection').value.trim();
     console.log("username", username);
     console.log("password", password);
+    console.log(language)
     
     // fetch to post new user to database 
     if (username && password) {
@@ -13,11 +15,11 @@ async function loginFormHandler(event) {
             method: 'post',
             body: JSON.stringify({
                 username,
-                password
+                password,
             }),
             headers: { 'Content-Type': 'application/json' }
         })
-       
+    
         // check the response status, error handling 
         if (response.ok) {
             document.location.replace('/')

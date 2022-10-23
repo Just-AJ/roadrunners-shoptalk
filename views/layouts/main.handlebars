@@ -33,7 +33,7 @@
                      <li role="menu-item"><a href="/">Settings</a></li>
                      <li role="menu-item"><a href="#">Help</a></li>
                      {{!-- Create Login here --}}
-                     <li role="menu-item"><a href="/login" id="logout">Login</a></li>
+                     <li role="menu-item"><a href="#loginModal" id="logout">Login</a></li>
                      <li role="menu-item"><a href="/login" id="logout">Logout</a></li>
                   </ul>
                </div>
@@ -43,6 +43,8 @@
  
  <!-- Hero and Body -->
  {{{ body }}}
+
+{{{ log-in }}}
  </body>
 
  <!-- footer -->
@@ -63,7 +65,7 @@
                     <a href="/signup">
                         <li class="footer__list-item">Sign Up</li>
                     </a>
-                    <a href="/login">
+                    <a href="#loginModal">
                         <li class="footer__list-item">Login</li>
                     </a>
                 </ul>
@@ -77,6 +79,5 @@
             </div>
         </div>
     </div>
-    
     <p> Made with ❤️ by <br> Michael Z, Brayden M, Ajani W, Quincy C, and Paul L. </p>
 </html>

@@ -1,12 +1,18 @@
-{{!-- //============================= LOGIN FORM =============================// --}}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Around the world</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge;"/>
+        <link href="https://unpkg.com/cirrus-ui" type="text/css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous" ></script> 
+     </head>
 
-
-{{!-- TODO: Needs Signup Form
- Expecting: Username: timmy20     Password: password
-  Signup Button. Signup Button will link back to the login page "/login". This will stop the signup page from signing up a user and automatically logging them in =============================// --}}
-
-</form>
-
+     <body>
         <form class="mb-1">
             <label class="font-bold">Sign Up</label>
                 <div class="col-10 pl-0">
@@ -16,11 +22,11 @@
                     </div>
             </div>
             <div class="input-control">
-                <input class="input-contains-icon input-contains-icon input-contains-icon-left" type="text" placeholder="Username" id="username-signup"/>
+                <input class="input-contains-icon input-contains-icon input-contains-icon-left" type="text" placeholder="Username" />
                 <span class="icon icon-left"><i class="fa fa-wrapper fa-user" aria-hidden="true"></i></span>
             </div>
             <div class="input-control">
-                <input type="password" class="input-contains-icon" placeholder="Password" id="password-signup"/><span class="icon"><i class="fa fa-wrapper fa-lock"></i></span>
+                <input type="password" class="input-contains-icon" placeholder="Password" /><span class="icon"><i class="fa fa-wrapper fa-lock"></i></span>
             </div>
             <div class="form-group">
                 <input type="number" class="form-group-input" placeholder="How old are you?"/>
@@ -46,7 +52,7 @@
         <div class="row">
             <div class="mb-1 col-6 pl-0">
                 <label class="font-bold"> Choose your language </label>
-                <select class="select" placeholder="Choose one">
+                <select class="select" placeholder="Choose one" id="languageSelection">
                     <option id="af" value="af"> Afrikaans </option> 
                     <option id="sq" value="sq"> Albanian </option>
                     <option id="ar" value="ar"> Arabic </option>: 
@@ -174,6 +180,5 @@
     </div>
     <input class="btn-animated" type="submit" value="Submit" />
 </form>
-
-
-<script src="/public/javascript/login.js"></script>
+</body>
+</html>
