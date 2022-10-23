@@ -17,7 +17,7 @@ async function loginFormHandler(event) {
             }),
             headers: { 'Content-Type': 'application/json' }
         })
-       
+    
         // check the response status, error handling 
         if (response.ok) {
             document.location.replace('/')

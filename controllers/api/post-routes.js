@@ -58,7 +58,7 @@ router.get('/:id', (req, res)=> {
         })
     });
     
-router.post("/", (req, res) => {
+router.post("/", withAuth, (req, res) => {
     Post.create({
         title: req.body.title,
         copy: req.body.copy,
@@ -71,7 +71,7 @@ router.post("/", (req, res) => {
         });
 });
 
-router.put("/:id",(req, res) => {
+router.put("/:id", withAuth, (req, res) => {
     console.log(req.body.copy)
     Post.update(
         {
@@ -99,7 +99,7 @@ router.put("/:id",(req, res) => {
 });
 
 
-router.delete("/:id", (req, res) => {
+router.delete("/:id", withAuth, (req, res) => {
     console.log("id", req.params.id);
     Post.destroy({
         where: {
