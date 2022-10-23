@@ -1,3 +1,70 @@
 {{!-- //============================= FORUM PAGE =============================// --}}
 
 {{!-- Will display all users posts only, buttons will be attached to posts for comments and creating new post. --}}
+
+</div>
+<div class="hero fullscreen hero-img">
+    <img class="u-opacity-90" src="./img/globe-forum.jpg" style="height: 100%; width: 100%;">
+</div>
+<button class="fa-solid fa-pen-to-square"><a href="#test-modal">Add a post</a></button>
+
+<div class="modal" id="test-modal">
+    <!-- Modal stuff -->
+    <a href="#searchModalDialog" class="modal-overlay close-btn" aria-label="Close"></a>
+    <div class="modal-content" role="document">
+        <div class="modal-header"><a href="#components" class="u-pull-right" aria-label="Close"><span class="icon"><svg
+                        aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times"
+                        class="svg-inline--fa fa-times fa-w-11 fa-wrapper" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 352 512">
+                        <path fill="currentColor"
+                            d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
+                        </path>
+                    </svg></span></a>
+            <div class="modal-title">Create</div>
+        </div>
+        <div class="modal-body">
+            <div class="r">
+                <h3 class="font-alt font-light u-text-center">Write your post below</h3>
+            </div>
+            <div class="space"></div>
+            <div class="divider"></div>
+            <div class="input-control">
+                <textarea placeholder="What would you like to share?"></textarea>
+            </div>
+            <div class="modal-footer">
+                <div class="form-section u-text-center">
+                    <a href="#components">
+                        <button class="btn btn--sm u-inline-block">Cancel</button>
+                    </a>
+                    <a href="#components">
+                        <button class="btn-info btn--sm u-inline-block">Post</button>
+                    </a>
+                </div>
+            </div>
+
+            {{!-- display users post --}}
+            {{#if posts.length}}
+            <section>
+                <h2>Your Posts</h2>
+                <ol>
+                    {{#each posts as |post|}}
+                    <li>
+                        {{> post-info post}}
+                        <a href="/forum/edit/{{post.id}}" class="edit-link">Edit post</a>
+                    </li>
+                    {{/each}}
+                </ol>
+            </section>
+            {{/if}}
+        </div>
+    </div>
+
+    <div class="modal" id="test-modal2">
+        <div class="modal-header">
+            <a href="#anchor-to-background" class="u-pull-right" aria-label="Close">
+                <span class="icon">
+                    <i class="fa-wrapper fa fa-times"></i>
+                </span>
+            </a>
+        </div>
+    </div>
