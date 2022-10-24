@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {Comment} = require('../../models')
+const { Comment } = require('../../models')
 const withAuth = require('../../utils/auth');
 
 // find all comments
@@ -11,6 +11,8 @@ router.get('/', (req, res)=> {
         res.status(500).json(err);
     });
 });
+
+
 // post a comment route
 router.post('/', withAuth, (req,res)=> {
     Comment.create(
@@ -25,6 +27,8 @@ router.post('/', withAuth, (req,res)=> {
         res.status(400).json(err);
     });
 });
+
+
 // delete a comment route
 router.delete('/:id', withAuth, (req,res)=> {
     Comment.destroy(
@@ -36,12 +40,18 @@ router.delete('/:id', withAuth, (req,res)=> {
     )
     .then(dbCommentData => {
         if(!dbCommentData){
-            res.status(404).json({message: 'no comment found with this id'});
+            res.status(404).json({message: ' No comment found with this ID !'});
             return;
         }
         res.json(dbCommentData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
     });
 });
+
+
 // edit comment
 router.put('/:id', withAuth, (req, res) =>{
     Comment.update(
@@ -69,5 +79,8 @@ router.put('/:id', withAuth, (req, res) =>{
             res.status(500).json(err);
         });
 })
+
+
+
 // export routes
 module.exports = router;

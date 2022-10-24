@@ -6,6 +6,7 @@ async function signupFormHandler(event) {
     // retrieving values from user sign-up
     const username = document.querySelector('#username-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
+
     console.log("username", username);
     console.log("password", password);
     
