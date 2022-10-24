@@ -14,7 +14,7 @@ router.get('/', (req, res)=> {
 
 
 // post a comment route
-router.post('/', withAuth, (req,res)=> {
+router.post('/', (req,res)=> {
     Comment.create(
         {
             comment_text: req.body.comment_text,
@@ -30,7 +30,7 @@ router.post('/', withAuth, (req,res)=> {
 
 
 // delete a comment route
-router.delete('/:id', withAuth, (req,res)=> {
+router.delete('/:id', (req,res)=> {
     Comment.destroy(
         {
             where: {
@@ -53,7 +53,7 @@ router.delete('/:id', withAuth, (req,res)=> {
 
 
 // edit comment
-router.put('/:id', withAuth, (req, res) =>{
+router.put('/:id', (req, res) =>{
     Comment.update(
         {
             comment_text: req.body.comment_text,
