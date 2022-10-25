@@ -6,6 +6,7 @@ async function loginFormHandler(event) {
     const password = document.querySelector('#login-password').value.trim();
     console.log("username", username);
     console.log("password", password);
+    console.log(language)
     
     // fetch to post new user to database 
     if (username && password) {
@@ -13,7 +14,7 @@ async function loginFormHandler(event) {
             method: 'post',
             body: JSON.stringify({
                 username,
-                password
+                password,
             }),
             headers: { 'Content-Type': 'application/json' }
         })

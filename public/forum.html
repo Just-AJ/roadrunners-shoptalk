@@ -43,9 +43,24 @@
 <div class="hero fullscreen hero-img">
     <img class="u-opacity-90" src="./img/globe-forum.jpg" style="height: 100%; width: 100%;">
 </div>
-<button class="fa-solid fa-pen-to-square"><a href="#test-modal">Add a post</a></button>
+<section class="u-align-center">
+<button class="u-justify-center fa-solid fa-pen-to-square"><a href="#main-post-modal">Add a post</a></button>
+</section>
 
-<div class="modal" id="test-modal">
+<div class="divider"></div>
+<div class="card">
+    <div class="card__header">
+        <div class="u-align-center"><span class="avatar"><img src="https://mymodernmet.com/wp/wp-content/uploads/2017/06/david-sculpture-4.jpg" alt="avatar"></span><p class="font-bold px-3">Firt Post</p></div>
+    </div>
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta delectus pariatur enim culpa ea voluptate minima quos, deleniti corporis suscipit, error reprehenderit corrupti quis illo aliquid sed iusto mollitia consequuntur.<a href="!#">#place #holder #cirrus</a></p>
+    </div>
+    <div class="card__footer level content">9:59 PM - 20 Oct 22</div>
+    <div class="card__action-bar u-center">
+        <button class="btn-transparent outline">Translate</button>
+    </div>
+</div>
+<div class="modal" id="main-post-modal">
     <!-- Modal stuff -->
         <a href="#searchModalDialog" class="modal-overlay close-btn" aria-label="Close"></a>
         <div class="modal-content" role="document">
@@ -57,9 +72,29 @@
                     <h3 class="font-alt font-light u-text-center">Write your post below</h3></div>
                 <div class="space"></div>
                 <div class="divider"></div>
-            <div class="input-control">
-                <textarea placeholder="What would you like to share?"></textarea>
-            </div>
+                <div class="row level">
+                    <div class="col-xs-3 level-item">
+                        <p id="post-title" class="m-0">Title:</p>
+                    </div>
+                    <div class="col-xs-9 level-item"><input type="name" value="title"></div>
+                </div>
+            <!-- Date -->
+    <div class="row level">
+    <div class="col-xs-3 level-item">
+        <p class="m-0">Date:</p>
+    </div>
+    <div class="col-xs-9 level-item"><input type="date" value="2017-3-21"></div>
+    </div>
+<!-- Time -->
+    <div class="row level">
+    <div class="col-xs-3 level-item">
+        <p class="m-0">Time:</p>
+    </div>
+    <div class="col-xs-9 level-item"><input type="time"></div>
+    <div class="input-control row level">
+        <textarea id="post-input" placeholder="What would you like to share?"></textarea>
+    </div>
+</div>
             <div class="modal-footer">
                 <div class="form-section u-text-center">
                     <a href="#components">
@@ -72,17 +107,5 @@
             </div>
         </div>
     </div>
-
-    <div class="modal" id="test-modal2">
-        <div class="modal-header">
-            <a href="#anchor-to-background" class="u-pull-right" aria-label="Close">
-                <span class="icon">
-                    <i class="fa-wrapper fa fa-times"></i>
-                </span>
-            </a>
-        </div>
-    </div>
-
-
 </body>
-</html>
+</html> 
