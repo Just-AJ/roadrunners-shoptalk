@@ -30,7 +30,7 @@
                   <a class="nav-dropdown-link">Profile</a> 
                   <ul class="dropdown-menu dropdown-animated" role="menu">
                     {{!-- User Dashboard will be here  as Settings --}}
-                     <li role="menu-item"><a href="#">Settings</a></li> 
+                     <li role="menu-item"><a href="/settings">Settings</a></li> 
                      <li role="menu-item"><a href="#">Help</a></li>
                      {{!-- Create Login here --}}
                      <li role="menu-item"><a href="#loginModal" id="logout">Login</a></li>
@@ -49,7 +49,7 @@
                 </div>
                 <form class="modal-body">
                     <div class="input-control">
-                        <input type="email" class="input-contains-icon" id="login-username" placeholder="UserName" /><span class="icon"><i class="fa fa-wrapper fa-envelope"></i></span>
+                        <input type="text" class="input-contains-icon" id="login-username" placeholder="UserName" /><span class="icon"><i class="fa fa-regular fa-users"></i></span>
                     </div>
                     <div class="input-control">
                         <input type="password" class="input-contains-icon" id="login-password" placeholder="Password" /><span class="icon"><i class="fa fa-wrapper fa-lock"></i></span>
@@ -82,7 +82,7 @@
                     <a href="/signup">
                         <li class="footer__list-item">Sign Up</li>
                     </a>
-                    <a href="#loginModal">
+                    <a href="/login">
                         <li class="footer__list-item">Login</li>
                     </a>
                 </ul>

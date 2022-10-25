@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" id="page">
+<head>
+      <title>Main Forum</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+      <meta charset="UTF-8"/>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge;"/>
+      <link href="./stylesheets/forum.css" rel="stylesheet">
+      <link href="https://unpkg.com/cirrus-ui" type="text/css" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"/>
+      <script src="https://kit.fontawesome.com/e05db27530.js" crossorigin="anonymous" defer></script>
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous" defer></script> 
+</head>
+
+<body>
+    <!-- First frame, contains Profile pic, and buttons to comment and translate -->
+<div class="frame">
+    <div class="frame__header u-text-center">
+        <div>
+            <figure class="avatar">
+                <img
+                    src="https://orig04.deviantart.net/aded/f/2013/066/c/2/profile_picture_by_naivety_stock-d5x8lbn.jpg"
+                />
+            </figure>
+        </div>
+        <div>
+            <div class="frame__subtitle">#Username</div>
+        </div>
+
+        <div class="card__action-bar u-center">
+            <button class="btn-transparent outline" id="translateButton"><i class="fa fa-solid fa-language"></i> Translate</button> 
+            <button class="btn-transparent outline"><i class=" fa fa-solid fa-comment"></i> Add Comment </button>
+        </div>
+    </div>
+    <!-- Second frame, contains the title and main post of initial post. -->
+    <div class="divider m-0"></div>
+    <div class="frame__body">
+        <div class="content u-text-center">
+            <h5>First Post</h5>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.
+            </p>
+        </div>
+    </div>
+    <div class="divider m-0"></div>
+    <!-- third frame, contains all comments with the username and timestamp added. -->
+    <div class="frame__footer">
+        <div class="frame__subtitle u-text-center">
+            <div class="tile">
+                <div class="tile__icon">
+                    <figure class="avatar"><img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png"></figure>
+                    <p class="tile__subtitle m-0">#Username commented:</p><span class="info">23 minutes ago</span></div>
+                    <div class="tile__container u-overflow-auto u-justify-space-around">
+                        <p class="tile__title m-0 u-text-wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat.</p>
+
+                            <br/>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                ex ea commodo consequat.</p>
+                                <p class="tile__title m-0 u-text-wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                    ex ea commodo consequat.</p>
+        
+                                    <br/>
+                                    <p class="tile__title m-0 u-text-wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                        ex ea commodo consequat.</p>
+                </div>
+                </div>
+        </div>
+    </div>
+    <div class="divider m-0"></div>
+    <div class="frame__footer">
+        <div class="frame__subtitle u-text-center">
+            <div class="tile">
+                <div class="tile__icon">
+                    <figure class="avatar"><img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png"></figure>
+                    <p class="tile__subtitle m-0">#Username commented:</p><span class="info">23 minutes ago</span></div>
+                    <div class="tile__container u-overflow-hidden u-justify-space-around">
+                        <p class="tile__title m-0 u-text-wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat.</p>
+
+                            <br/>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.                                   
+                </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="comment-modal">
+    <!-- Modal stuff -->
+        <a href="#searchModalDialog" class="modal-overlay close-btn" aria-label="Close"></a>
+        <div class="modal-content" role="document">
+            <div class="modal-header"><a href="#components" class="u-pull-right" aria-label="Close"><span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11 fa-wrapper" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg></span></a>
+                <div class="modal-title">Add commnet</div>
+            </div>
+            <div class="modal-body">
+                <div class="r">
+                    <h3 class="font-alt font-light u-text-center">Write your comment below</h3></div>
+                <div class="space"></div>
+                <div class="divider"></div>
+                <div class="row level">
+    <div class="input-control row level">
+        <textarea id="post-input" placeholder="What would you like to share?"></textarea>
+    </div>
+</div>
+            <div class="modal-footer">
+                <div class="form-section u-text-center">
+                    <a href="#components">
+                        <button class="btn btn--sm u-inline-block">Cancel</button>
+                    </a>
+                    <a href="#components">
+                        <button class="btn-info btn--sm u-inline-block">Post</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

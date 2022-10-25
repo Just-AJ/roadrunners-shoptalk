@@ -4,21 +4,23 @@
 {{!-- TODO: Needs Login Form
  Expecting: Username: timmy20     Password: password
  with Login Button and Signup Button. Signup Button will link to the signup page Handlebar "/signup" =============================// --}}
-    <div class="hero fullscreen hero-img">
-    <img class="u-opacity-90" src="./public/img/chang-duong-Sj0iMtq_Z4w-unsplash.jpg" style="height: 100%; width: 100%;">
-</div>
-
+<!-- Hero -->
+         <div class="hero fullscreen hero-img parallax-img">
+            <img src="./img/duy-pham-Cecb0_8Hx-o-unsplash.jpg" style="height: 100%; width: 100%;">
+         </div>
 <form class="ml-1 login-form">
+    <div> <h2> Log in! </h2> </div> 
     <div>
-        <label for="username-login">username:</label>
+        <label for="username-login">Username:</label>
         <input type="text" id="login-username"/>
     </div>
     <div>
-        <label for="passsword">password:</label>
+        <label for="passsword">Password:</label>
         <input type="password" id="login-password"/>
     </div>
-    <div>
-        <button type="submit">login</button>
+    <div class="row level u-justify-center">
+        <br/>
+        <button class="animated btn-success u-round-full u-shadow-sm" type="submit">login</button>
     </div>
 </form>
 
