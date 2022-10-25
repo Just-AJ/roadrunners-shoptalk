@@ -119,8 +119,6 @@ router.get('/signup', (req,res) => {
 })
 
 
-<<<<<<< HEAD
-=======
 router.get('/forum', (req,res) => {
     if (req.session.loggedIn) {
         res.redirect('/');
@@ -128,7 +126,24 @@ router.get('/forum', (req,res) => {
     }
     
     res.render('forum');
+});
+
+router.get('/settings', (req,res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    
+    res.render('settings');
+});
+
+router.get('/funforum', (req,res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    
+    res.render('funforum');
 })
->>>>>>> df6e6a9b1f5674fa3b0b62f3d276cb7bfcf491c8
 //exports router
 module.exports = router;
