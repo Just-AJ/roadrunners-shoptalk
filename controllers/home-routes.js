@@ -119,5 +119,13 @@ router.get('/signup', (req,res) => {
 })
 
 
+router.get('/forum', (req,res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    
+    res.render('forum');
+})
 //exports router
 module.exports = router;
