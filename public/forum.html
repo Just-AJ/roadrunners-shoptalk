@@ -44,7 +44,7 @@
     <img class="u-opacity-90" src="./img/globe-forum.jpg" style="height: 100%; width: 100%;">
 </div>
 <section class="u-align-center">
-<button class="u-justify-center fa-solid fa-pen-to-square"><a href="#test-modal">Add a post</a></button>
+<button class="u-justify-center fa-solid fa-pen-to-square"><a href="#main-post-modal">Add a post</a></button>
 </section>
 
 <div class="divider"></div>
@@ -60,7 +60,7 @@
         <button class="btn-transparent outline">Translate</button>
     </div>
 </div>
-<div class="modal" id="test-modal">
+<div class="modal" id="main-post-modal">
     <!-- Modal stuff -->
         <a href="#searchModalDialog" class="modal-overlay close-btn" aria-label="Close"></a>
         <div class="modal-content" role="document">
@@ -72,9 +72,12 @@
                     <h3 class="font-alt font-light u-text-center">Write your post below</h3></div>
                 <div class="space"></div>
                 <div class="divider"></div>
-            <div class="input-control">
-                <textarea placeholder="What would you like to share?"></textarea>
-            </div>
+                <div class="row level">
+                    <div class="col-xs-3 level-item">
+                        <p id="post-title" class="m-0">Title:</p>
+                    </div>
+                    <div class="col-xs-9 level-item"><input type="name" value="title"></div>
+                </div>
             <!-- Date -->
     <div class="row level">
     <div class="col-xs-3 level-item">
@@ -88,6 +91,9 @@
         <p class="m-0">Time:</p>
     </div>
     <div class="col-xs-9 level-item"><input type="time"></div>
+    <div class="input-control row level">
+        <textarea id="post-input" placeholder="What would you like to share?"></textarea>
+    </div>
 </div>
             <div class="modal-footer">
                 <div class="form-section u-text-center">
@@ -102,4 +108,4 @@
         </div>
     </div>
 </body>
-</html>
+</html> 
