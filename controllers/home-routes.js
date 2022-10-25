@@ -126,7 +126,7 @@ router.get('/forum', (req,res) => {
     }
     
     res.render('forum');
-})
+});
 
 router.get('/funforum', (req,res) => {
     if (req.session.loggedIn) {
