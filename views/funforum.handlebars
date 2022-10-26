@@ -1,14 +1,15 @@
-</div>
 <div class="hero fullscreen hero-img">
     <img class="u-opacity-90" src="./img/call-me-fred-STV98EbRy7w-unsplash.jpg" style="height: 100%; width: 100%;">
 </div>
-<section class="u-align-center">
-<button class="u-justify-center fa-solid fa-pen-to-square"><a href="#fun-post-modal">Add a post</a></button>
+</div>
+<section class="mb-10 row level u-flex u-justify-center">
+<button class="text-blue-600 bg-blue-100 btn--xl fa-solid fa-pen-to-square"><a href="#fun-post-modal">Add a post</a></button>
 </section>
 
 <div class="divider"></div>
-<div class="card">
-    <div class="card__header">
+<div id="fun-post-container">
+ <div class="card">
+    <div class="card__header u-flex u-justify-center">
         <div class="u-align-center"><span class="avatar"><img src="https://mymodernmet.com/wp/wp-content/uploads/2017/06/david-sculpture-4.jpg" alt="avatar"></span><p class="font-bold px-3">Firt Post</p></div>
     </div>
     <div class="content">
@@ -16,8 +17,23 @@
     </div>
     <div class="card__footer level content">9:59 PM - 20 Oct 22</div>
     <div class="card__action-bar u-center">
-        <button class="btn-transparent outline">Translate</button>
+        <button class="btn-transparent outline" id="translateButton"><i class="fa fa-solid fa-language"></i> Translate</button> 
+        <button class="btn-transparent outline"><i class=" fa fa-solid fa-comment"></i><a href="/comments">Comment</a></button> <span><i class="fa fa-solid fa-comments"></i> #count of comments</span>
     </div>
+ </div>
+  <div class="card">
+    <div class="card__header u-flex u-justify-center">
+        <div class="u-align-center"><span class="avatar"><img src="https://mymodernmet.com/wp/wp-content/uploads/2017/06/david-sculpture-4.jpg" alt="avatar"></span><p class="font-bold px-3">Firt Post</p></div>
+    </div>
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta delectus pariatur enim culpa ea voluptate minima quos, deleniti corporis suscipit, error reprehenderit corrupti quis illo aliquid sed iusto mollitia consequuntur.<a href="!#">#place #holder #cirrus</a></p>
+    </div>
+    <div class="card__footer level content">9:59 PM - 20 Oct 22</div>
+    <div class="card__action-bar u-center">
+        <button class="btn-transparent outline" id="translateButton"><i class="fa fa-solid fa-language"></i> Translate</button> 
+        <button class="btn-transparent outline"><i class=" fa fa-solid fa-comment"></i><a href="/comments">Comment</a></button> <span><i class="fa fa-solid fa-comments"></i> #count of comments</span>
+    </div>
+ </div>
 </div>
 <div class="modal" id="fun-post-modal">
     <!-- Modal stuff -->
@@ -37,19 +53,13 @@
                     </div>
                     <div class="col-xs-9 level-item"><input type="name" value="title"></div>
                 </div>
-            <!-- Date -->
-    <div class="row level">
+                <!-- File -->
+<div class="row level">
     <div class="col-xs-3 level-item">
-        <p class="m-0">Date:</p>
+        <p class="m-0">Image or Video: </p>
     </div>
-    <div class="col-xs-9 level-item"><input type="date" value="2017-3-21"></div>
-    </div>
-<!-- Time -->
-    <div class="row level">
-    <div class="col-xs-3 level-item">
-        <p class="m-0">Time:</p>
-    </div>
-    <div class="col-xs-9 level-item"><input type="time"></div>
+    <div class="col-xs-9 level-item"><input type="file"></div>
+</div>
     <div class="input-control row level">
         <textarea id="post-input" placeholder="What would you like to share?"></textarea>
     </div>

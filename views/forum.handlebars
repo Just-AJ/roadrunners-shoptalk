@@ -6,31 +6,61 @@
 <div class="hero fullscreen hero-img">
     <img class="u-opacity-90" src="./img/globe-forum.jpg" style="height: 100%; width: 100%;">
 </div>
-<button class="fa-solid fa-pen-to-square"><a href="#main-post-modal">Add a post</a></button>
+<section class="mb-10 row level u-flex u-justify-center">
+<button class="text-blue-600 bg-blue-100 btn--xl fa-solid fa-pen-to-square"><a href="#main-post-modal">Add a post</a></button>
+</section>
 
+<div class="divider"></div>
+<div id="post-container">
+<div class="card">
+    <div class="card__header u-flex u-justify-center">
+        <div class="u-align-center"><span class="avatar"><img src="https://mymodernmet.com/wp/wp-content/uploads/2017/06/david-sculpture-4.jpg" alt="avatar"></span><p class="font-bold px-3">Firt Post</p></div>
+    </div>
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta delectus pariatur enim culpa ea voluptate minima quos, deleniti corporis suscipit, error reprehenderit corrupti quis illo aliquid sed iusto mollitia consequuntur.<a href="!#">#place #holder #cirrus</a></p>
+    </div>
+    <div class="card__footer level content">9:59 PM - 20 Oct 22</div>
+    <div class="card__action-bar u-center">
+        <button class="btn-transparent outline" id="translateButton"><i class="fa fa-solid fa-language"></i> Translate</button> 
+        <button class="btn-transparent outline"><i class=" fa fa-solid fa-comment"></i><a href="/comments">Comment</a></button> <span><i class="fa fa-solid fa-comments"></i> #count of comments</span>
+    </div>
+</div>
+<div class="card">
+    <div class="card__header u-flex u-justify-center">
+        <div class="u-align-center"><span class="avatar"><img src="https://mymodernmet.com/wp/wp-content/uploads/2017/06/david-sculpture-4.jpg" alt="avatar"></span><p class="font-bold px-3">second Post</p></div>
+    </div>
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta delectus pariatur enim culpa ea voluptate minima quos, deleniti corporis suscipit, error reprehenderit corrupti quis illo aliquid sed iusto mollitia consequuntur.<a href="!#">#place #holder #cirrus</a></p>
+    </div>
+    <div class="card__footer level content">9:59 PM - 20 Oct 22</div>
+    <div class="card__action-bar u-center">
+        <button class="btn-transparent outline" id="translateButton"><i class="fa fa-solid fa-language"></i> Translate</button> 
+        <button class="btn-transparent outline"><i class=" fa fa-solid fa-comment"></i><a href="/comments">Comment</a></button> <span><i class="fa fa-solid fa-comments"></i> #count of comments</span>
+    </div>
+</div>
+</div>
 <div class="modal" id="main-post-modal">
     <!-- Modal stuff -->
-    <a href="#searchModalDialog" class="modal-overlay close-btn" aria-label="Close"></a>
-    <div class="modal-content" role="document">
-        <div class="modal-header"><a href="#components" class="u-pull-right" aria-label="Close"><span class="icon"><svg
-                        aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times"
-                        class="svg-inline--fa fa-times fa-w-11 fa-wrapper" role="img" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 352 512">
-                        <path fill="currentColor"
-                            d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
-                        </path>
-                    </svg></span></a>
-            <div class="modal-title">Create</div>
-        </div>
-        <div class="modal-body">
-            <div class="r">
-                <h3 class="font-alt font-light u-text-center">Write your post below</h3>
+        <a href="#searchModalDialog" class="modal-overlay close-btn" aria-label="Close"></a>
+        <div class="modal-content" role="document">
+            <div class="modal-header"><a href="#components" class="u-pull-right" aria-label="Close"><span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11 fa-wrapper" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg></span></a>
+                <div class="modal-title">Create</div>
             </div>
-            <div class="space"></div>
-            <div class="divider"></div>
-            <div class="input-control">
-                <textarea placeholder="What would you like to share?"></textarea>
-            </div>
+            <div class="modal-body">
+                <div class="r">
+                    <h3 class="font-alt font-light u-text-center">Write your post below</h3></div>
+                <div class="space"></div>
+                <div class="divider"></div>
+                <div class="row level">
+                    <div class="col-xs-3 level-item">
+                        <p id="post-title" class="m-0">Title:</p>
+                    </div>
+                    <div class="col-xs-9 level-item"><input type="name" value="title"></div>
+                </div>
+    <div class="input-control row level">
+        <textarea id="post-input" placeholder="What would you like to share?"></textarea>
+    </div>
+</div>
             <div class="modal-footer">
                 <div class="form-section u-text-center">
                     <a href="#components">
@@ -41,6 +71,8 @@
                     </a>
                 </div>
             </div>
+        </div>
+    </div>
 
             {{!-- display users post --}}
             {{#if posts.length}}
