@@ -6,7 +6,7 @@ async function loginFormHandler(event) {
     const password = document.querySelector('#login-password').value.trim();
     console.log("username", username);
     console.log("password", password);
-    console.log(language)
+    // console.log(language)
     
     // fetch to post new user to database 
     if (username && password) {
@@ -32,5 +32,5 @@ async function loginFormHandler(event) {
 
 
 // call signup form and add event listent to signup button
-console.log("button clicked", loginBtn);
 const loginBtn = document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
+console.log("button clicked", loginBtn);

@@ -36,14 +36,14 @@
                      {{!-- Create Login here --}}
                      <li role="menu-item"><a href="/login" id="logout">Logout</a></li>
                      {{else}}
-                     <li role="menu-item"><a href="#loginModal" id="logout">Login</a></li>
+                     <li role="menu-item"><a href="/login" id="logout">Login</a></li>
                      {{/if}}
                   </ul>
                </div>
             </div>
          </div>
       </div>
-    <div class="modal" id="loginModal">
+    {{!-- <div class="modal" id="loginModal">
         <!-- Modal stuff -->
             <a href="#searchModalDialog" class="modal-overlay close-btn" aria-label="Close"></a>
             <div class="modal-content" role="document">
@@ -60,7 +60,7 @@
                     <button class="animated btn-success u-pull-right" type="submit">Log In</button>
                 </form>
         </div>
-        </div>
+        </div> --}}
  <!-- Hero and Body -->
  <div>
  {{{ body }}}

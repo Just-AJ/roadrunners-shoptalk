@@ -78,13 +78,13 @@ router.post('/login', (req,res) => {
         }
 
         // checking to see if the user typed in correct password using checkPassword.
-        const confirmedPw = loggedInUserData.checkPassword(req.body.password);
+        // const confirmedPw = loggedInUserData.checkPassword(req.body.password);
         
-        // if not correct, notify the user of incorrect password
-        if(!confirmedPw) {
-            res.status(400).json({ message: 'Incorrect Password, please try again! ' })
-            return;
-        }
+        // // if not correct, notify the user of incorrect password
+        // if(!confirmedPw) {
+        //     res.status(400).json({ message: 'Incorrect Password, please try again! ' })
+        //     return;
+        // }
 
         req.session.save(() => {
             // session variables
