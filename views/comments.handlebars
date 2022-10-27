@@ -1,6 +1,6 @@
     <br/>
     <br/>
-
+<a href="/forum" class="">&larr; Back to forum</a>
     <!-- First frame, contains Profile pic, and buttons to comment and translate -->
 <div class="frame">
     <div class="frame__header u-text-center">
@@ -12,7 +12,7 @@
             </figure>
         </div>
         <div>
-            <div class="frame__subtitle">#Username</div>
+            <div class="frame__subtitle">{{user.username}}</div>
         </div>
 
         <div class="card__action-bar u-center">
@@ -33,62 +33,37 @@
         </div>
     </div>
     <div class="divider m-0"></div>
-    <!-- third frame, contains all comments with the username and timestamp added. -->
-    <div class="frame__footer">
-        <div class="frame__subtitle u-text-center">
-            <div class="tile">
-                <div class="tile__icon">
-                    <figure class="avatar"><img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png"></figure>
-                    <p class="tile__subtitle m-0">#Username commented:</p><span class="info">23 minutes ago</span></div>
-                    <div class="tile__container u-overflow-auto u-justify-space-around">
-                        <p class="tile__title m-0 u-text-wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat.</p>
-
-                            <br/>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                                ex ea commodo consequat.</p>
-                                <p class="tile__title m-0 u-text-wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                                    ex ea commodo consequat.</p>
-        
-                                    <br/>
-                                    <p class="tile__title m-0 u-text-wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                                        ex ea commodo consequat.</p>
-                </div>
-                </div>
-        </div>
-    </div>
+    {{!-- {{> post-info post }} --}}
     <div class="divider m-0"></div>
+    <!-- third frame, contains all comments with the username and timestamp added. -->
+{{!-- 
+        {{#each this}}
     <div class="frame__footer">
         <div class="frame__subtitle u-text-center">
             <div class="tile">
                 <div class="tile__icon">
                     <figure class="avatar"><img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png"></figure>
-                    <p class="tile__subtitle m-0">#Username commented:</p><span class="info">23 minutes ago</span></div>
+                    <p class="tile__subtitle m-0">{{user.username}} commented:</p><span class="info">{{format_date created_at}}</span></div>
                     <div class="tile__container u-overflow-hidden u-justify-space-around">
                         <p class="tile__title m-0 u-text-wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                             ex ea commodo consequat.</p>
 
                             <br/>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.                                   
-                </div>
+                           {{comment_text}}
                 </div>
         </div>
     </div>
-</div>
-
+    <div class="divider m-0"></div>
+        {{/each}}
+</div> --}}
+{{!-- 
 <div class="modal" id="comment-modal">
     <!-- Modal stuff -->
         <a href="#searchModalDialog" class="modal-overlay close-btn" aria-label="Close"></a>
         <div class="modal-content" role="document">
             <div class="modal-header"><a href="#components" class="u-pull-right" aria-label="Close"><span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11 fa-wrapper" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg></span></a>
-                <div class="modal-title">Add commnet</div>
+                <div class="modal-title">Add comment</div>
             </div>
             <div class="modal-body">
                 <div class="r">
@@ -97,7 +72,7 @@
                 <div class="divider"></div>
                 <div class="row level">
     <div class="input-control row level">
-        <textarea id="post-input" placeholder="What would you like to share?"></textarea>
+        <textarea id="comment-body" placeholder="What would you like to share?"></textarea>
     </div>
 </div>
             <div class="modal-footer">
@@ -106,9 +81,11 @@
                         <button class="btn btn--sm u-inline-block">Cancel</button>
                     </a>
                     <a href="#components">
-                        <button class="btn-info btn--sm u-inline-block">Post</button>
+                        <button class="btn-info btn--sm u-inline-block" type="submit" id="post-comment">Post Comment</button>
                     </a>
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
+
+    <script src="/javascript/comment.js"></script>
