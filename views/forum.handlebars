@@ -2,10 +2,21 @@
 
 {{!-- Will display all users posts only, buttons will be attached to posts for comments and creating new post. --}}
 
+
+<div class="hero fullscreen hero-img">
+    <img class="u-opacity-90" src="./img/globe-forum.jpg" style="height: 100%; width: 100%;">
+</div>
+<section class="mb-10 row level u-flex u-justify-center">
+<button class="text-blue-600 bg-blue-100 btn--xl fa-solid fa-pen-to-square" type="button"><a href="/single-post">Add a post</a></button>
+</section>
+
+<div class="divider"></div>
+<div id="post-container">
+
             {{!-- display users post --}}
             {{#if posts.length}}
             <section>
-                <h2>Posts</h2>
+                <h2>News Feed</h2>
                 <ol>
                     {{#each posts as |post|}}
                     <li>

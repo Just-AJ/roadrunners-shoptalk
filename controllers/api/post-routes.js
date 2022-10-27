@@ -7,6 +7,8 @@ router.get("/", (req, res) => {
     Post.findAll({
         attributes: ['id', 'title', 'copy', 'created_at'],
          // JOIN tables
+         order: [['created_at', 'ASC']],
+
          include: [
             {
                 model: Comment,
