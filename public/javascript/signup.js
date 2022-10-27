@@ -6,9 +6,15 @@ async function signupFormHandler(event) {
     // retrieving values from user sign-up
     const username = document.querySelector('#username-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
+    const avatar = document.getElementById('#avatar-selector')
+    const language = document.getElementById('#language-selector')
+    var avValue = avatar.value;
+    var lanValue = language.value;
 
     console.log("username", username);
     console.log("password", password);
+    console.log("avatar", avValue);
+    console.log("language", lanValue);
     
     // fetch to post new user to database 
     if (username && password) {
@@ -16,7 +22,9 @@ async function signupFormHandler(event) {
             method: 'post',
             body: JSON.stringify({
                 username,
-                password
+                password,
+                lanValue,
+                avValue
             }),
             headers: { 'Content-Type': 'application/json' }
         })
@@ -32,4 +40,4 @@ async function signupFormHandler(event) {
 }
 
 // call signup form and add event listent to signup button
-document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
+document.querySelector('#signup-form').addEventListener('submit', signupFormHandler);

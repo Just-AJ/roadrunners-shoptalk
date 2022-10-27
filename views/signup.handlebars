@@ -7,7 +7,7 @@
 
 <br/>
 <br/>
- <form class="mb-1 signup-form">
+ <form class="mb-1 signup-form==" id="signup-form">
             <label class="font-black"><h4>Sign Up</h4></label>
                 <div class="col-10 pl-0">
                     <div class="input-control">
@@ -44,9 +44,63 @@
             </div>
         </div>
         <div class="row">
+    <div class="col-xs-3 level">
+    <label class="font-bold"> Choose your avatar </label>
+    </div>
+    <div class="row level">
+    <h6>1:</h6>
+    <div class="avatar"><img src="https://www.linkpicture.com/q/boy.png" alt="boy-avatar"></div>
+    <h6>2:</h6>
+    <div class="avatar"><img src="https://www.linkpicture.com/q/girl-2_1.png" alt="avatar"></div>
+    <h6>3:</h6>
+    <div class="avatar"><img src="https://www.linkpicture.com/q/girl-1_1.png" alt="avatar"></div>
+    <h6>4:</h6>
+    <div class="avatar"><img src="https://www.linkpicture.com/q/gamer_2.png" alt="avatar"></div>
+    <h6>5:</h6>
+    <div class="avatar"><img src="https://www.linkpicture.com/q/man-1_4.png" alt="avatar"></div>
+    <h6>6:</h6>
+    <div class="avatar"><img src="https://iili.io/bdckzJ.md.png" alt="avatar"></div>
+    <h6>7:</h6>
+    <div class="avatar"><img src="https://iili.io/bdccOu.md.png" alt="avatar"></div>
+    <h6>8:</h6>
+    <div class="avatar"><img src="https://iili.io/bdcGiQ.md.png" alt="avatar"></div>
+    <h6>9:</h6>
+    <div class="avatar"><img src="https://iili.io/bdcVfV.md.png" alt="avatar"></div>
+    <h6>10:</h6>
+    <div class="avatar"><img src="https://iili.io/bdcW0B.md.png" alt="avatar"></div>
+    <h6>11:</h6>
+    <div class="avatar"><img src="https://iili.io/bdcXUP.md.png" alt="avatar"></div>
+    <h6>12:</h6>
+    <div class="avatar"><img src="https://iili.io/bdcjJ1.md.png" alt="avatar"></div>
+    <h6>13:</h6>
+    <div class="avatar"><img src="https://iili.io/bdcw5F.md.png" alt="avatar"></div>
+    <h6>14:</h6>
+    <div class="avatar"><img src="https://iili.io/bdcNOg.md.png" alt="avatar"></div>
+    <h6>15:</h6>
+    <div class="avatar"><img src="https://iili.io/bdcOba.md.png" alt="avatar"></div>
+    </div>
+    <select class="select row level" id="avatar-selector" placeholder="Choose one">
+        <option id="avatar-1" value="https://www.linkpicture.com/q/boy.png"> - 1  </option>
+        <option id="avatar-2" value="https://www.linkpicture.com/q/girl-2_1.png"> - 2 </option>
+        <option id="avatar-3" value="https://www.linkpicture.com/q/girl-1_1.png">- 3</option>
+        <option id="avatar-4" value="https://www.linkpicture.com/q/gamer_2.png">- 4</option>
+        <option id="avatar-5" value="https://www.linkpicture.com/q/man-1_4.png">- 5</option>
+        <option id="avatar-6" value="https://iili.io/bdckzJ.md.png">- 6</option>
+        <option id="avatar-7" value="https://iili.io/bdccOu.md.png">- 7</option>
+        <option id="avatar-8" value="https://iili.io/bdcGiQ.md.png">- 8</option>
+        <option id="avatar-9" value="https://iili.io/bdcVfV.md.png">- 9</option>
+        <option id="avatar-10" value="https://iili.io/bdcW0B.md.png">- 10</option>
+        <option id="avatar-11" value="https://iili.io/bdcXUP.md.png">- 11</option>
+        <option id="avatar-12" value="https://iili.io/bdcjJ1.md.png">- 12</option>
+        <option id="avatar-13" value="https://iili.io/bdcw5F.md.png">- 13</option>
+        <option id="avatar-14" value="https://iili.io/bdcNOg.md.png">- 14</option>
+        <option id="avatar-15" value="https://iili.io/bdcOba.md.png">- 15</option>
+    </select>
+</div>
+        <div class="row">
             <div class="mb-1 col-6 pl-0">
                 <label class="font-bold"> Choose your language </label>
-                <select class="select" placeholder="Choose one">
+                <select class="select" id="language-selector" placeholder="Choose one">
                     <option id="af" value="af"> Afrikaans </option> 
                     <option id="sq" value="sq"> Albanian </option>
                     <option id="ar" value="ar"> Arabic </option>: 
@@ -166,12 +220,6 @@
             </div>
         </div>
             <!-- File -->
-        <div class="row level">
-            <div class="mb-1 col-6 pl-0">
-                <label class="font-bold"> Choose your profile picture </label>
-            <div class="col-6 level-item pl-0"><input type="file"></div>
-        </div>
-    </div>
     <input class="btn-animated" type="submit" value="Submit" />
 </form>
 

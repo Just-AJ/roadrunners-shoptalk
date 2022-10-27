@@ -23,7 +23,9 @@
     <div class="divider m-0"></div>
 {{> post-info post }}
 <div class="divider m-0"></div>
-<form class="modal" id="comment-modal">
+  {{> comments post.comments}}
+  <div class="divider m-0"></div>
+<form class="" id="comment-modal">
     <!-- Modal stuff -->
         <a href="#searchModalDialog" class="modal-overlay close-btn" aria-label="Close"></a>
         <div class="modal-content" role="document">
@@ -37,7 +39,7 @@
                 <div class="divider"></div>
                 <div class="row level">
     <div class="input-control row level">
-        <textarea id="comment-body" placeholder="What would you like to share?"></textarea>
+        <textarea name="comment-body" placeholder="What would you like to share?"></textarea>
     </div>
 </div>
             <div class="modal-footer">
@@ -51,13 +53,13 @@
                 </div>
             </div>
         </div>
-    </form>
+    </div>
+</form>
 
+<div class="divider m-0"></div>
 
+ 
 
-
-   {{> comments post.comments}}
-
-{{#if loggedIn}}
+{{!-- {{#if loggedIn}} --}}
 <script src="/javascript/comment.js"></script>
-{{/if}}
+{{!-- {{/if}} --}}

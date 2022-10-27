@@ -2,31 +2,38 @@
 
 
 
-user of post 
+user of post
 date created
-comment Text 
+comment Text
 
-  --}}
+--}}
 
-  <div class="divider m-0"></div>
+<div class="divider m-0"></div>
 
-        {{#each this}}
-    <div class="frame__footer">
-        <div class="frame__subtitle u-text-center">
-            <div class="tile">
-                <div class="tile__icon">
-                    <figure class="avatar"><img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png"></figure>
-                    <p class="tile__subtitle m-0">{{user.username}} commented:</p><span class="info">{{format_date created_at}}</span></div>
-                    <div class="tile__container u-overflow-hidden u-justify-space-around">
-                        {{!-- <p class="tile__title m-0 u-text-wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat.</p> --}}
+<div class="frame__footer">
+  {{#each this}}
+  <div class="frame__subtitle u-text-center">
+    <div class="tile">
 
-                            <br/>
-                           {{comment_text}}
-                </div>
-        </div>
+      <div class="tile__icon">
+        <figure class="avatar"><img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png"></figure>
+        <p class="tile__subtitle m-0">{{user.username}} commented:</p><span class="info">{{format_date
+          created_at}}</span>
+      </div>
+
+      <div class="tile__container u-overflow-hidden u-justify-space-around">
+        {{!-- <p class="tile__title m-0 u-text-wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+          ex ea commodo consequat.</p> --}}
+        <br />
+        <p class="tile__title m-0 u-text-wrap">{{comment_text}}</p>
+      </div>
+      
     </div>
-    <div class="divider m-0"></div>
-        {{/each}}
-    <div class="divider m-0"></div>
+  </div>
+  <div class="divider m-0"></div>
+  {{/each}}
+</div>
+
+<div class="divider m-0"></div>
