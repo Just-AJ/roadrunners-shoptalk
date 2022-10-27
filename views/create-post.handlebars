@@ -1,0 +1,36 @@
+{{!-- Will be the user settings page  --}}
+<form class="" id="main-post-modal">
+    <!-- Modal stuff -->
+        <a href="#searchModalDialog" class="modal-overlay close-btn" aria-label="Close"></a>
+    <div class="modal-content" role="document">
+            <div class="modal-header"><a href="#components" class="u-pull-right" aria-label="Close"><span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11 fa-wrapper" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg></span></a>
+                <div class="modal-title">Create</div>
+            </div>
+            <div class="modal-body">
+                <div class="r">
+                    <h3 class="font-alt font-light u-text-center">Write your post below</h3></div>
+                <div class="space"></div>
+                <div class="divider"></div>
+                <div class="row level">
+                    <div class="col-xs-3 level-item">
+                        <p id="post-title" class="m-0">Title:</p>
+                    </div>
+                    <div class="col-xs-9 level-item"><input type="name" value="title" name="post-title"></div>
+                </div>
+    <div class="input-control row level">
+        <textarea id="post-input" name="post-text" placeholder="What would you like to share?"></textarea>
+    </div>
+</div>
+            <div class="modal-footer">
+                <div class="form-section u-text-center">
+                    <a href="/forum">
+                        <button class="btn btn--sm u-inline-block">Cancel</button>
+                    </a>
+                
+                        <button class="btn-info btn--sm u-inline-block" id="" type="submit">Post</button>
+                    
+                </div>
+            </div>
+        </div>
+    </form>
+<script src="/javascript/add-post.js"></script>

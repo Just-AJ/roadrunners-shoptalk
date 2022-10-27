@@ -83,7 +83,7 @@ router.get('/post/:id', (req, res) => {
             // console.log("singlepost", singlePostData);
             // serialize data
             const post = dbPostData.get({ plain: true })
-            // render data to template, single-psot
+            // render data to template, single-post
             res.render('single-post', { 
                 post,
                 loggedIn: req.session.loggedIn 
@@ -153,6 +153,15 @@ router.get('/single-post', (req,res) => {
     // }
     
     res.render('single-post');
+});
+
+router.get('/create-post', (req,res) => {
+    // if (req.session.loggedIn) {
+    //     res.redirect('/');
+    //     return;
+    // }
+    
+    res.render('create-post');
 });
 
 router.get('/forum', (req, res) => {

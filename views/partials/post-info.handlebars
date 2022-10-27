@@ -19,6 +19,6 @@ Add a comment partial  --}}
     <div class="card__footer level content">{{user.username}} {{format_date created_at}}</div>
     <div class="card__action-bar u-center">
         <button class="btn-transparent outline" id="translateButton"><i class="fa fa-solid fa-language"></i> Translate</button> 
-        <button class="btn-transparent outline"><i class=" fa fa-solid fa-comment"></i><a href="/comments/{{id}}">Comment</a></button> <span><i class="fa fa-solid fa-comments"></i> #count of comments</span>
+        <button class="btn-transparent outline"><i class=" fa fa-solid fa-comment"></i><a href="/post/{{id}}">Add Comment</a></button> <span><i class="fa fa-solid fa-comments"></i> {{comments.length}} {{format_plural "comment" comments.length}}</span>
     </div>
 </div>
