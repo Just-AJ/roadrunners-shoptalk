@@ -99,10 +99,10 @@ router.get('/post/:id', (req, res) => {
 
 // GET , get and render login handlebars page 
 router.get('/login', (req,res) => {
-    if (req.session.loggedIn) {
-        res.redirect('/');
-        return;
-    }
+    // if (req.session.loggedIn) {
+    //     res.redirect('/');
+    //     return;
+    // }
     
     res.render('login');
 });
@@ -110,49 +110,90 @@ router.get('/login', (req,res) => {
 
 // GET , get and render signup handlebars page 
 router.get('/signup', (req,res) => {
-    if (req.session.loggedIn) {
-        res.redirect('/');
-        return;
-    }
+    // if (req.session.loggedIn) {
+    //     res.redirect('/');
+    //     return;
+    // }
     
     res.render('signup');
 })
 
 
-router.get('/forum', (req,res) => {
-    if (req.session.loggedIn) {
-        res.redirect('/');
-        return;
-    }
-    
-    res.render('forum');
-});
-
 router.get('/funforum', (req,res) => {
-    if (req.session.loggedIn) {
-        res.redirect('/');
-        return;
-    }
+    // if (req.session.loggedIn) {
+    //     res.redirect('/');
+    //     return;
+    // }
     
     res.render('funforum');
 })
 
 router.get('/settings', (req,res) => {
-    if (req.session.loggedIn) {
-        res.redirect('/');
-        return;
-    }
+    // if (req.session.loggedIn) {
+    //     res.redirect('/');
+    //     return;
+    // }
     
     res.render('settings');
 })
 
 router.get('/comments', (req,res) => {
-    if (req.session.loggedIn) {
-        res.redirect('/');
-        return;
-    }
+    // if (req.session.loggedIn) {
+    //     res.redirect('/');
+    //     return;
+    // }
     
     res.render('comments');
-})
+});
+
+router.get('/single-post', (req,res) => {
+    // if (req.session.loggedIn) {
+    //     res.redirect('/');
+    //     return;
+    // }
+    
+    res.render('single-post');
+});
+
+router.get('/forum', (req, res) => {
+    console.log(req.session);
+    console.log('======================');
+    Post.findAll({
+      // where: {
+      //   user_id: req.session.user_id
+      // },
+      attributes: [
+        'id',
+        'title',
+        'copy',
+        'created_at',
+       
+      ],
+      include: [
+        {
+          model: Comment,
+          attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+          include: {
+            model: User,
+            attributes: ['username']
+          }
+        },
+        {
+          model: User,
+          attributes: ['username']
+        }
+      ]
+    })
+      .then(dbPostData => {
+          const posts = dbPostData.map(post => post.get({ plain: true }));
+          console.log(posts);
+          res.render('forum', { posts, loggedIn: true });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+  
 //exports router
 module.exports = router;

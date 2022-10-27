@@ -8,3 +8,17 @@ Actual post
 
 comments from other users
 Add a comment partial  --}}
+
+<div class="card">
+    <div class="card__header u-flex u-justify-center">
+        <div class="u-align-center"><span class="avatar"><img src="https://mymodernmet.com/wp/wp-content/uploads/2017/06/david-sculpture-4.jpg" alt="avatar"></span><p class="font-bold px-3">{{title}}</p></div>
+    </div>
+    <div class="content">
+        <p>{{copy}}<a href="!#">#place #holder #cirrus</a></p>
+    </div>
+    <div class="card__footer level content">{{user.username}} {{format_date created_at}}</div>
+    <div class="card__action-bar u-center">
+        <button class="btn-transparent outline" id="translateButton"><i class="fa fa-solid fa-language"></i> Translate</button> 
+        <button class="btn-transparent outline"><i class=" fa fa-solid fa-comment"></i><a href="/comments">Comment</a></button> <span><i class="fa fa-solid fa-comments"></i> #count of comments</span>
+    </div>
+</div>

@@ -32,5 +32,5 @@ async function loginFormHandler(event) {
 
 
 // call signup form and add event listent to signup button
-const loginBtn = document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
-console.log("button clicked", loginBtn);
+document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
+// console.log('login file now loaded');

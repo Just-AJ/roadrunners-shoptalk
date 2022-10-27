@@ -33,13 +33,13 @@ router.get('/:id', (req, res) => {
         where: { id: req.params.id }
     })
 
-        .then(singleUserData => {
-            if (!singleUserData) {
+        .then(userData => {
+            if (!userData) {
                 res.status(404).res.json({ message: 'No user was found with this id !' });
                 return;
             }
 
-            res.json(singleUserData);
+            res.json(userData);
         })
         .catch(err => {
             console.log(err);
@@ -53,14 +53,14 @@ router.post('/', (req,res) => {
         username: req.body.username,
         password: req.body.password
     })
-    .then(createUserData => {
-        // req.session.save(() => {
-        //     // session variables 
-        //     req.session.user_id = createUserData.id;
-        //     req.session.username = createUserData.username;
-        //     req.session.loggedIn = true;
-        // })
-        res.json(createUserData)
+    .then(userData => {
+        req.session.save(() => {
+            // session variables 
+            req.session.user_id = userData.id;
+            req.session.username = userData.username;
+            req.session.loggedIn = true;
+        })
+        res.json(userData)
     })
     .catch(err => {
         console.log(err);
@@ -71,14 +71,14 @@ router.post('/', (req,res) => {
 // POST, user login authentication
 router.post('/login', (req,res) => {
     User.findOne({ where: { username: req.body.username } })
-    .then(loggedInUserData => {
-        if(!loggedInUserData) {
+    .then(userData => {
+        if(!userData) {
             res.status(400).json({ message: 'Username cannot be found! ' })
             return;
         }
 
         // checking to see if the user typed in correct password using checkPassword.
-        // const confirmedPw = loggedInUserData.checkPassword(req.body.password);
+        // const confirmedPw = userData.checkPassword(req.body.password);
         
         // // if not correct, notify the user of incorrect password
         // if(!confirmedPw) {
@@ -88,13 +88,13 @@ router.post('/login', (req,res) => {
 
         req.session.save(() => {
             // session variables
-            req.session.user_id = loggedInUserData.id;
-            req.session.username = loggedInUserData.username;
+            req.session.user_id = userData.id;
+            req.session.username = userData.username;
             req.session.loggedIn = true;
       
            
         // if correct, log user in and notify the user
-        res.json({ user: loggedInUserData, message: 'You are now logged in! Welcome to the Tech-Blog!'});
+        res.json({ user: userData, message: 'You are now logged in! Welcome to the Tech-Blog!'});
         });
     });
 });
@@ -123,11 +123,11 @@ router.put('/:id', (req,res) => {
             id: req.params.id
         }
     })
-    .then(updateUserData => {
-        if(!updateUserData[0]) {
+    .then(userData => {
+        if(!userData[0]) {
             res.status(404).json({ message: 'No user found with this id' });
         } 
-        res.json(updateUserData)
+        res.json(userData)
     })
     .catch(err => {
         console.log(err);
@@ -143,11 +143,11 @@ router.delete('/:id', (req,res) => {
             id: req.params.id
         }
     })
-    .then(destroyUserData => {
-        if(!destroyUserData) {
+    .then(userData => {
+        if(!userData) {
             res.status(404).json({ message: 'No user found with this id' });
         } 
-        res.json(destroyUserData)
+        res.json(userData)
     })
     .catch(err => {
         console.log(err);
