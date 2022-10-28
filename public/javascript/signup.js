@@ -6,25 +6,24 @@ async function signupFormHandler(event) {
     // retrieving values from user sign-up
     const username = document.querySelector('#username-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
-    const avatar = document.getElementById('#avatar-selector')
-    const language = document.getElementById('#language-selector')
-    var avValue = avatar.value;
-    var lanValue = language.value;
+    const avatar = document.querySelector('#avatar-selector').value;
+    const language = document.querySelector('#language-selector').value
+
 
     console.log("username", username);
     console.log("password", password);
-    console.log("avatar", avValue);
-    console.log("language", lanValue);
+    console.log("avatar", avatar);
+    console.log("language", language);
     
     // fetch to post new user to database 
-    if (username && password) {
+    if (username && password && language && avatar) {
       const response =  await fetch('/api/users', {
             method: 'post',
             body: JSON.stringify({
                 username,
                 password,
-                lanValue,
-                avValue
+                language,
+                avatar
             }),
             headers: { 'Content-Type': 'application/json' }
         })

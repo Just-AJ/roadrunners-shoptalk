@@ -36,6 +36,14 @@ User.init(
                 // this means the password must be at least FOUR characters long
                 len: [4]
             }
+        },
+        avatar: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        language: {
+            type: DataTypes.STRING,
+            allowNull: false,
         }
     },
     {   

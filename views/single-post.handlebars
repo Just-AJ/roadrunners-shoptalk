@@ -20,12 +20,26 @@
             <button class="btn-transparent outline"><i class=" fa fa-solid fa-comment"></i><a href="#comment-modal"> Add Comment </a></button>
         </div>
     </div>
-    <div class="divider m-0"></div>
-{{> post-info post }}
+        <div class="frame__body">
+        <div class="content u-text-center">
+            <h5>{{ title }}</h5>
+            <p>
+                {{ copy }}
+            </p>
+        </div>
+    </div>
 <div class="divider m-0"></div>
   {{> comments post.comments}}
   <div class="divider m-0"></div>
-<form class="" id="comment-modal">
+  
+  </div>
+
+
+
+
+
+  
+<form class="modal" id="comment-modal">
     <!-- Modal stuff -->
         <a href="#searchModalDialog" class="modal-overlay close-btn" aria-label="Close"></a>
         <div class="modal-content" role="document">

@@ -2,8 +2,8 @@ async function newPostHandler(event) {
     event.preventDefault();
     // console.log('submitting post');
 
-    const title = document.querySelector('input[name="main-post-title"]').value;
-    const copy = document.querySelector('textarea[name="post-text"]').value;
+    const title = document.querySelector('#forum-post-title').value;
+    const copy = document.querySelector('#post-input').value;
     console.log(title, copy);
     const response = await fetch('/api/posts', {
       method: 'POST',
