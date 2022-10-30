@@ -1,0 +1,33 @@
+<article class="mt-10">
+    <a href="/forum" class="d-flex justify-content-end">&larr; Back to forum</a>
+    <h2 class="border-bottom mb-5 mt-2 bg-light">Edit Post</h2>
+
+    <div class="card mb-3">
+    <form class="edit-post card-body">
+        <div>
+            <label for="post-title" class="card-title font-weight-bold">Edit Post Title:</label>
+            <input type="text" name="post-title" class="form-control" value="{{post.title}}"/>
+            <span class="justify">(Posted by {{post.user.username}} on {{format_date post.created_at}})</span>
+      </div>
+      <div>
+            <label for="posted-note" class="card-title font-weight-bold">Edit Posted Note Here:</label>
+            <textarea class="form-control" name="note-body">{{post.copy}}</textarea>
+            
+      </div>
+
+      <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Save post</button>
+        <button type="button" class="delete btn btn-danger">Delete post</button>
+      </div>
+
+    </form>
+    </div>
+</article>
+
+ {{> comments post.comments}}
+
+
+
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
+<script src="/javascript/comment.js"></script>
