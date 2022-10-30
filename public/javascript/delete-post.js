@@ -1,20 +1,41 @@
-async function deletePostHandler(event) {
-    event.preventDefault();
-  
-    const id = window.location.toString().split('/')[
-      window.location.toString().split('/').length - 1
-    ];
-    console.log(id);
+
+  document.querySelectorAll(`[id^="delete-link-"]`).forEach(button => {
+    console.log(button)
+    button.addEventListener('click', async (event) => {
+      event.preventDefault();
+      console.log(event)
     
-    const response = await fetch(`/api/posts/${id}`, {
-      method: 'DELETE'
+      const id = event.currentTarget.getAttribute("data-post-id")
+      console.log(id);
+      
+      const response = await fetch(`/api/posts/${id}`, {
+        method: 'DELETE'
+      });
+    
+      if (response.ok) {
+        document.location.replace('/forum');
+      } else {
+        alert(response.statusText);
+      }
     });
+  });
+
+  // async function deletePostHandler(event) {
+  //   event.preventDefault();
   
-    if (response.ok) {
-      document.location.replace('/');
-    } else {
-      alert(response.statusText);
-    }
-  }
+  //   const id = event.currentTarget.getAttribute("data-post-id")
+  //   console.log(id);
+
+  //   const response = await fetch(`/api/posts/${id}`, {
+  //     method: 'DELETE'
+  //   });
   
-  document.querySelector('#delete-link').addEventListener('click', deletePostHandler);
+  //   if (response.ok) {
+  //     document.location.replace('/forum');
+  //   } else {
+  //     alert(response.statusText);
+  //   }
+  // }
+  
+  // document.querySelector('[id^="delete-link-"]').addEventListener('click', deletePostHandler);
+  
