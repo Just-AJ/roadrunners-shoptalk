@@ -11,8 +11,12 @@ Add a comment partial  --}}
 
 <form class="card" id="{{id}}">
     <div class="card__header u-flex u-justify-center">
+<<<<<<< HEAD
         <div class="u-align-center"><span class="avatar"><img src="{{user.avatar}}" alt="avatar"></span>
         <p id="post-title" class="font-bold px-3" value="{{title}}">{{title}}</p></div>
+=======
+        <div class="u-align-center"><span class="avatar"><img src="{{user.avatar}}" ></span><p class="font-bold px-3">{{title}}</p></div>
+>>>>>>> 5f0f27ce36a6c2bde49dba03d282a0cfdcd2ff3b
     </div>
     <div class="content" id="content-text">
         <p>{{copy}}</p>
@@ -21,8 +25,15 @@ Add a comment partial  --}}
     <div class="card__action-bar u-center">
         <button class="btn-transparent outline" id="translateButton"><i class="fa fa-solid fa-language"></i> Translate</button> 
         <button class="btn-transparent outline"><i class=" fa fa-solid fa-comment"></i><a href="/post/{{id}}">Add Comment</a></button> <span><i class="fa fa-solid fa-comments"></i> {{comments.length}} {{format_plural "comment" comments.length}}</span>
-        <button class="btn-transparent outline"><a href="/forum/edit/{{post.id}}" class="edit-link">Edit post</a></button>
+        <button class="btn-transparent outline"><a href="/forum/edit/{{id}}" class="edit-link">Edit post</a></button>
+        <button class="btn-transparent outline" type="button" id="delete-link-{{id}}" data-post-id="{{id}}">Delete post</button>
     </div>
+<<<<<<< HEAD
 </form>
 
 <script src="/javascript/translate.js"></script>
+=======
+</div>
+
+<script src="/javascript/delete-post.js"></script>
+>>>>>>> 5f0f27ce36a6c2bde49dba03d282a0cfdcd2ff3b
