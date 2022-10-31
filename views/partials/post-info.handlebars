@@ -9,12 +9,13 @@ Actual post
 comments from other users
 Add a comment partial  --}}
 
-<div class="card" id="{{id}}">
+<form class="card" id="{{id}}">
     <div class="card__header u-flex u-justify-center">
-        <div class="u-align-center"><span class="avatar"><img src="{{user.avatar}}" alt="avatar"></span><p class="font-bold px-3">{{title}}</p></div>
+        <div class="u-align-center"><span class="avatar"><img src="{{user.avatar}}" alt="avatar"></span>
+        <p id="post-title" class="font-bold px-3" value="{{title}}">{{title}}</p></div>
     </div>
-    <div class="content">
-        <p>{{copy}}<a href="#">#place #holder #cirrus</a></p>
+    <div class="content" id="content-text">
+        <p>{{copy}}</p>
     </div>
     <div class="card__footer level content">{{user.username}} {{format_date created_at}}</div>
     <div class="card__action-bar u-center">
@@ -22,4 +23,6 @@ Add a comment partial  --}}
         <button class="btn-transparent outline"><i class=" fa fa-solid fa-comment"></i><a href="/post/{{id}}">Add Comment</a></button> <span><i class="fa fa-solid fa-comments"></i> {{comments.length}} {{format_plural "comment" comments.length}}</span>
         <button class="btn-transparent outline"><a href="/forum/edit/{{post.id}}" class="edit-link">Edit post</a></button>
     </div>
-</div>
+</form>
+
+<script src="/javascript/translate.js"></script>

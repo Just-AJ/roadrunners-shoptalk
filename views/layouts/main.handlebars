@@ -26,10 +26,11 @@
             </div>
             <div class="nav-right">
                <div class="nav-item has-sub toggle-hover" id="dropdown">
-                <div class="avatar"><img src="{{user.avatar}}" alt="avatar"></div>
-                  <a class="nav-dropdown-link">Profile</a> 
+                {{#if loggedIn}}
+                <div class="avatar"><img src="{{ avatar }}" alt="avatar"></div>
+                  <a class="nav-dropdown-link">{{ username }}</a> 
                   <ul class="dropdown-menu dropdown-animated" role="menu">
-                  {{#if loggedIn}}
+
                     {{!-- User Dashboard will be here  as Settings --}}
                      <li role="menu-item"><a href="/settings">Settings</a></li> 
                      <li role="menu-item"><a href="#">Help</a></li>
