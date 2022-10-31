@@ -1,22 +1,4 @@
-var translator = require("../../models/Translate")
-
-
-// async function translator (event) {
-//     const text = document.querySelector("#post-title")
-//     console.log(text)
-//     console.log("Translated")
-
-// };
-
-// const title = document.querySelector(`[id^="post-title-"]`).textContent
-// const text = document.querySelector(`[id^="content-text-"]`).textContent
-
-
-const title1 = "hello world"
-const tittle2 = "Hola mundo"
-
-translator([title1, tittle2], "es")
-
+// const translate = require('translate-google')
 
 // function translateText (text, lang) {
 
@@ -27,16 +9,47 @@ translator([title1, tittle2], "es")
 //     })
  
 // }
-// translateText(title1, "es")
-// translateText(title2, "es")
+// async function translator (event) {
+//     const text = document.querySelector("#post-title")
+//     console.log(text)
+//     console.log("Translated")
 
-// document.querySelectorAll(`[id^="translate-link-"]`).forEach(button => {
-//     console.log(button)
-//     button.addEventListener('click', async (event) => {
-//       event.preventDefault();
-//       console.log(event);
+
+
+// };
+
+
+
+// const title = querySelect 
+// const title1 = "hello world"
+// const title2 = "Hola mundo"
+
+// translateText(title, "en")
+//     console.log(translateText);
+
+// translateText(text, 'es')
+
+document.querySelectorAll(`[id^="translate-link-"]`).forEach(button => {
+    console.log(button)
+    button.addEventListener('click', async (event) => {
+      event.preventDefault();
+      console.log(event);
     
-//     //   const id = event.currentTarget.getElementById("#content-text")
-    //   console.log(id);
-//     });
-// });
+    const id = event.currentTarget.getAttribute("data-post-id")
+      console.log(id);
+
+      const response = await fetch(`/api/posts/${id}`, {
+        method: 'GET'
+      });
+    
+      if (response.ok) {
+        console.log(response.title)
+        console.log(response.copy)
+        document.location.reload('');
+      } else {
+        alert(response.statusText);
+      }
+
+
+    });
+  });

@@ -1,6 +1,6 @@
 
   document.querySelectorAll(`[id^="delete-link-"]`).forEach(button => {
-    console.log(button)
+    // console.log(button)
     button.addEventListener('click', async (event) => {
       event.preventDefault();
       // console.log(event)
