@@ -99,10 +99,10 @@ router.get('/post/:id', (req, res) => {
 
 // GET , get and render login handlebars page 
 router.get('/login', (req,res) => {
-    // if (req.session.loggedIn) {
-    //     res.redirect('/');
-    //     return;
-    // }
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
     
     res.render('login');
 });
@@ -110,56 +110,56 @@ router.get('/login', (req,res) => {
 
 // GET , get and render signup handlebars page 
 router.get('/signup', (req,res) => {
-    // if (req.session.loggedIn) {
-    //     res.redirect('/');
-    //     return;
-    // }
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
     
     res.render('signup');
 })
 
 
 router.get('/funforum', (req,res) => {
-    // if (req.session.loggedIn) {
-    //     res.redirect('/');
-    //     return;
-    // }
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
     
     res.render('funforum');
 })
 
 router.get('/settings', (req,res) => {
-    // if (req.session.loggedIn) {
-    //     res.redirect('/');
-    //     return;
-    // }
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
     
     res.render('settings');
 })
 
 router.get('/comments', (req,res) => {
-    // if (req.session.loggedIn) {
-    //     res.redirect('/');
-    //     return;
-    // }
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
     
     res.render('comments');
 });
 
 router.get('/single-post', (req,res) => {
-    // if (req.session.loggedIn) {
-    //     res.redirect('/');
-    //     return;
-    // }
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
     
     res.render('single-post');
 });
 
 router.get('/create-post', (req,res) => {
-    // if (req.session.loggedIn) {
-    //     res.redirect('/');
-    //     return;
-    // }
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
     
     res.render('create-post');
 });

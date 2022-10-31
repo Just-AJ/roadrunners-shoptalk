@@ -1,40 +1,47 @@
 const translate = require('translate-google')
-const Handlebars = require("handlebars")
-const template = Handlebars.compile("Name {{name}}");
 
-console.log(template({ name: "Paul" }));
 
-var titleScreen = "Around the world"
+// console.log(template({ name: "Paul" }));
 
-translateText ( titleScreen, 'fr')
+// var titleScreen = "Around the world"
 
-Handlebars.registerHelper("translator", function(string) {
+// translateText(titleScreen, 'fr')
+
+Handlebars.registerHelper("translator", function (string) {
     console.log(string.translateText());
     return string.translateText();
 })
 
-// function takes two parameters. Text = string, obj, or array. Lang = default language of user profile
-function translateText (text, lang) {
 
-    translate( text  , {to: lang}).then(res => {
+// function takes two parameters. Text = string, obj, or array. Lang = default language of user profile
+async function translateText(text, lang) {
+    const text = document.querySelector('#post-text').value;
+    const lang = await fetch(`/api/users/lang/${id}`, {
+        method: 'GET'
+    });
+    console.log(text, lang);
+
+    translate(text, { to: lang }).then(res => {
         console.log(res)
     }).catch(err => {
         console.error(err)
     })
- 
+
 }
+
+document.querySelector('#translateButton').addEventListener('click', translateText)
 
 // few testing options below. 
-var obText = {
-    firstText: 'Hello World',
-    secondText: 'I see you',
-    thirdText: 'can you see me?',
-    fourthText: 'I hope you can'
-}
+// var obText = {
+//     firstText: 'Hello World',
+//     secondText: 'I see you',
+//     thirdText: 'can you see me?',
+//     fourthText: 'I hope you can'
+// }
 
-var obTest = [obText.firstText, obText.thirdText]
+// var obTest = [obText.firstText, obText.thirdText]
 
-const obJoin = obTest.join()
+// const obJoin = obTest.join()
 
 
-module.export = translateText();
+// module.export = document.querySelector('#translateButton').addEventListener('click', translateText)

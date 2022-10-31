@@ -28,20 +28,6 @@ async function commentFormHandler(event) {
           alert(response.statusText);
         }
      } 
-    //  else if (comment_text) {
-    //     const res = await fetch ('/api/comments', {
-    //         method: 'GET',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //           }
-    //     });
-    //     if (res.ok) {
-    //         document.location.reload();
-    //       } else {
-    //         alert(res.statusText);
-    //       }
-
-    // }
 
 }
 

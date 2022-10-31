@@ -46,6 +46,30 @@ router.get('/:id', (req, res) => {
             res.status(500).json(err)
         });
 });
+// route for language
+router.get('/lang/:id', (req, res) => {
+    User.findOne({
+        // language
+        attributes: {
+            include: ['language']
+        },
+        // get the id parameter
+        where: { id: req.params.id }
+    })
+
+        .then(userData => {
+            if (!userData) {
+                res.status(404).res.json({ message: 'No user was found with this id !' });
+                return;
+            }
+
+            res.json(userData);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err)
+        });
+});
 
 // POST, create a new user 
 router.post('/', (req,res) => {
@@ -82,13 +106,13 @@ router.post('/login', (req,res) => {
         }
 
         // checking to see if the user typed in correct password using checkPassword.
-        // const confirmedPw = userData.checkPassword(req.body.password);
+        const confirmedPw = userData.checkPassword(req.body.password);
         
-        // // if not correct, notify the user of incorrect password
-        // if(!confirmedPw) {
-        //     res.status(400).json({ message: 'Incorrect Password, please try again! ' })
-        //     return;
-        // }
+        // if not correct, notify the user of incorrect password
+        if(!confirmedPw) {
+            res.status(400).json({ message: 'Incorrect Password, please try again! ' })
+            return;
+        }
 
         req.session.save(() => {
             // session variables
