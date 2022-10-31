@@ -3,10 +3,10 @@
     console.log(button)
     button.addEventListener('click', async (event) => {
       event.preventDefault();
-      console.log(event)
+      // console.log(event)
     
       const id = event.currentTarget.getAttribute("data-post-id")
-      console.log(id);
+      // console.log(id);
       
       const response = await fetch(`/api/posts/${id}`, {
         method: 'DELETE'

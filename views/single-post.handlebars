@@ -7,7 +7,7 @@
         <div>
             <figure class="avatar">
                 <img
-                    src="https://orig04.deviantart.net/aded/f/2013/066/c/2/profile_picture_by_naivety_stock-d5x8lbn.jpg"
+                    src="{{post.user.avatar}}"
                 />
             </figure>
         </div>
@@ -23,47 +23,19 @@
     </div>
         <div class="frame__body">
         <div class="content u-text-center">
-<<<<<<< HEAD
-            <h5>First Post</h5>
+            <h5>{{post.title}}</h5>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.
-            </p>
-        </div>
-        <form class="" id="comment-modal">
-    <!-- Modal stuff -->
-=======
-            <h5>{{title}}</h5>
-            <p>
-                {{copy}}
+                {{post.copy}}
             </p>
         </div>
     </div>
-<div class="divider m-0"></div>
-  {{> comments post.comments}}
-  <div class="divider m-0"></div>
-  
-  </div>
 
-
-
-
-
-  
-<form class="" id="comment-modal">
+<form class="comment-modal" id="comment-modal">
     <!-- Modal stuff -->
-        <a href="#searchModalDialog" class="modal-overlay close-btn" aria-label="Close"></a>
-        <div class="modal-content" role="document">
-            <div class="modal-header"><a href="" class="u-pull-right" aria-label="Close"><span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11 fa-wrapper" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg></span></a>
-                <div class="modal-title">Add comment</div>
-            </div>
+    <br/>
             <div class="modal-body">
                 <div class="r">
                     <h3 class="font-alt font-light u-text-center">Write your comment below</h3></div>
-                <div class="space"></div>
->>>>>>> 5f0f27ce36a6c2bde49dba03d282a0cfdcd2ff3b
-                <div class="divider"></div>
                 <div class="row level">
     <div class="input-control row level">
         <textarea name="comment-body" id="comment-text" placeholder="What would you like to share?"></textarea>

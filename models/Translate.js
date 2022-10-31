@@ -1,4 +1,4 @@
-const translate = Require('translate-google')
+const translate  = require('translate-google')
 
 // function takes two parameters. Text = string, obj, or array. Lang = default language of user profile
 function translateText (text, lang) {
@@ -10,6 +10,5 @@ function translateText (text, lang) {
     })
  
 }
-translateText("Hello World", "es");
 
-module.exports = translateText();
+module.exports = translateText;
