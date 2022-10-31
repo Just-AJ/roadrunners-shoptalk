@@ -94,6 +94,8 @@ router.post('/login', (req,res) => {
             // session variables
             req.session.user_id = userData.id;
             req.session.username = userData.username;
+            req.session.avatar = userData.avatar;
+            req.session.language = userData.language;
             req.session.loggedIn = true;
       
            

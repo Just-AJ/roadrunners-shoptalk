@@ -19,7 +19,7 @@ async function editHandler(event) {
     });
 
     if (response.ok) {
-        document.location.replace('/forum/');
+        document.location.replace('/forum');
     } else {
         alert(response.statusText);
     }
