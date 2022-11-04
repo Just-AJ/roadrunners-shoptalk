@@ -36,10 +36,10 @@ Have a quality README (with unique name, description, technologies used, screens
 
 ## Links 
 - Deployed Application: https://around-the-world-pro-max.herokuapp.com/
-- Contributors Githubs: 
-* Michael Z https://github.com/MichaelZimm20
-* Brayden M https://github.com/banjosquash
-* Paul L https://github.com/Plovato97
-* Quincy T https://github.com/qclaytor30
-* Ajani W https://github.com/Just-AJ
+###  Contributors Githubs: 
+- Michael Z https://github.com/MichaelZimm20
+- Brayden M https://github.com/banjosquash
+- Paul L https://github.com/Plovato97
+- Quincy T https://github.com/qclaytor30
+- Ajani W https://github.com/Just-AJ
 
