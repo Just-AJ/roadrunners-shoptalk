@@ -33,6 +33,23 @@ Protect API keys and sensitive information with environment variables.
 Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
 
 Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
+## Techonologies 
+### Styling
+Cirrus and Bootstrap
+Handlebars for HTML
+
+### Code
+Javascript
+
+### Packages
+express
+express-handlebars
+express-session
+bcrypt
+dotenv
+Mysql12, sequelize
+translate-google
+
 
 ## Links 
 - Deployed Application: https://around-the-world-pro-max.herokuapp.com/
