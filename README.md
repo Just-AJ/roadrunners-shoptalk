@@ -35,20 +35,18 @@ Have a clean repository that meets quality coding standards (file structure, nam
 Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 ## Techonologies 
 ### Styling
-Cirrus and Bootstrap
-Handlebars for HTML
-
+- Cirrus and Bootstrap
+- Handlebars for HTML
 ### Code
-Javascript
-
+- Javascript
 ### Packages
-express
-express-handlebars
-express-session
-bcrypt
-dotenv
-Mysql12, sequelize
-translate-google
+- express
+- express-handlebars
+- express-session
+- bcrypt
+- dotenv
+- Mysql12, sequelize
+- translate-google
 
 
 ## Links 
