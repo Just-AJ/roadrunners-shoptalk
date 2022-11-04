@@ -58,3 +58,5 @@ Have a quality README (with unique name, description, technologies used, screens
 - Quincy T https://github.com/qclaytor30
 - Ajani W https://github.com/Just-AJ
 
+## Wesbite picture 
+[![website-screenshot.png](https://i.postimg.cc/sDm3Gs0K/website-screenshot.png)](https://postimg.cc/bsZ7KcP2)
